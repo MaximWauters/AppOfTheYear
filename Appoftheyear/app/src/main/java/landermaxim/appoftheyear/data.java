@@ -9,5 +9,5 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class data {
     private DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
-    
+
 }
