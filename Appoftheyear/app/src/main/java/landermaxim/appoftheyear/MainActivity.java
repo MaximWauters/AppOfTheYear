@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         databasemedicatie.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-                //medilist.clear();
+                medilist.clear();
                 for (DataSnapshot medicatiesnapshot: dataSnapshot.getChildren()){
                     Medicate medicatie = medicatiesnapshot.getValue(Medicate.class);
                     medilist.add(medicatie);
