@@ -62,6 +62,8 @@ public class MainActivity extends AppCompatActivity {
                 for (DataSnapshot medicatiesnapshot: dataSnapshot.getChildren()){
                     Medicate medicatie = medicatiesnapshot.getValue(Medicate.class);
                     medilist.add(medicatie);
+
+
                 }
 
                 medicatielist adapter = new medicatielist(MainActivity.this, medilist);

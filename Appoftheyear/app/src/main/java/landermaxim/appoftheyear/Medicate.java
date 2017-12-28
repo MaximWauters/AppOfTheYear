@@ -19,9 +19,7 @@ public class Medicate {
         this.note = note;
     }
 
-    public String getNaam() {
-        return naam;
-    }
+    public String getNaam() { return naam; }
 
     public String getTijd() {
         return dagperiode;
