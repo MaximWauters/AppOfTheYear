@@ -6,16 +6,16 @@ package landermaxim.appoftheyear;
 
 public class Medicate {
     String naam;
-    String tijd;
+    String dagperiode;
     String note;
 
     public Medicate(){
 
     }
 
-    public Medicate(String naam, String tijd, String note) {
+    public Medicate(String naam, String dagperiode, String note) {
         this.naam = naam;
-        this.tijd = tijd;
+        this.dagperiode = dagperiode;
         this.note = note;
     }
 
@@ -24,7 +24,7 @@ public class Medicate {
     }
 
     public String getTijd() {
-        return tijd;
+        return dagperiode;
     }
 
     public String getNote() {

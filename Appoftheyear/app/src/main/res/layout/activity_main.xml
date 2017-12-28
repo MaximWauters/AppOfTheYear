@@ -8,11 +8,15 @@
 
     <EditText
         android:id="@+id/TextViewZoek"
-        android:layout_width="226dp"
+        android:layout_width="55dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name" />
+        android:inputType="textPersonName" />
+
+    <ListView
+        android:id="@+id/ListViewmedicatie"
+        android:layout_width="232dp"
+        android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/buttonZoek"
@@ -21,6 +25,6 @@
         android:layout_weight="1"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name" />
+        android:text="Search" />
 
 </LinearLayout>

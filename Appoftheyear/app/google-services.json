@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1068698166796-cqbp7j6qq4jma3aut0os3co22093dv72.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "landermaxim.appoftheyear",
+            "certificate_hash": "66371cf04140dfec5dabb498412501a157f5292d"
+          }
+        },
+        {
           "client_id": "1068698166796-6iidqmled0q30aphe4m0aqmm71n172ml.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1068698166796-6iidqmled0q30aphe4m0aqmm71n172ml.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2
