@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         btnzoek.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String zoektekst = btnzoek.getText().toString();
+                String zoektekst = edittextmedicatie.getText().toString();
                 zoekMedicatie(zoektekst);
             }
         });
@@ -56,8 +56,9 @@ public class MainActivity extends AppCompatActivity {
     private void zoekMedicatie(String zoekt){
         Toast.makeText(MainActivity.this, "Started Search", Toast.LENGTH_LONG).show();
 
-        Query databasesearchquery = databasemedicatie.orderByChild("naam").startAt(zoekt).endAt(zoekt + "\uf8ff");
-        FirebaseRecyclerAdapter<Medicate, medicateViewHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Medicate, medicateViewHolder>(Medicate.class, R.layout.list_layout, medicateViewHolder.class, databasemedicatie) {
+        Query FirebaseSeatchQuery = databasemedicatie.orderByChild("naam").startAt(zoekt).endAt(zoekt + "\uf8ff");
+
+        FirebaseRecyclerAdapter<Medicate, medicateViewHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Medicate, medicateViewHolder>(Medicate.class, R.layout.list_layout, medicateViewHolder.class, FirebaseSeatchQuery) {
             @Override
             protected void populateViewHolder(medicateViewHolder viewHolder, Medicate model, int position) {
                 viewHolder.setData(model.getNaam(),model.getTijd(),model.getNote());
