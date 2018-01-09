@@ -48,18 +48,13 @@ public class MainActivity extends AppCompatActivity {
         btnzoek.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-<<<<<<< Updated upstream
                 String zoektekst = edittextmedicatie.getText().toString();
-=======
-                String zoektekst = btnzoek.getText().toString(); // ??
->>>>>>> Stashed changes
                 zoekMedicatie(zoektekst);
             }
         });
-
     }
 
-    private void zoekMedicatie(String zoekt){
+    private void zoekMedicatie(String zoekt) {
         Toast.makeText(MainActivity.this, "Started Search", Toast.LENGTH_LONG).show();
 
         Query FirebaseSeatchQuery = databasemedicatie.orderByChild("naam").startAt(zoekt).endAt(zoekt + "\uf8ff");
@@ -67,42 +62,14 @@ public class MainActivity extends AppCompatActivity {
         FirebaseRecyclerAdapter<Medicate, medicateViewHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<Medicate, medicateViewHolder>(Medicate.class, R.layout.list_layout, medicateViewHolder.class, FirebaseSeatchQuery) {
             @Override
             protected void populateViewHolder(medicateViewHolder viewHolder, Medicate model, int position) {
-                viewHolder.setData(model.getNaam(),model.getTijd(),model.getNote());
-
-                /*
-                if (model.getNaam() == null) {
-                    viewHolder.setData("Geen data gevonden.","","");
-                }
-
-                */
+                viewHolder.setData(model.getNaam(), model.getTijd(), model.getNote());
             }
         };
         ListViewMedicatie.setAdapter(firebaseRecyclerAdapter);
     }
 
-    /*@Override
-    protected void onStart() {
-        super.onStart();
+    private void SetNotification(){
+        Toast.makeText(MainActivity.this, "Notification Set", Toast.LENGTH_LONG).show();
 
-        databasemedicatie.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                medilist.clear();
-                for (DataSnapshot medicatiesnapshot: dataSnapshot.getChildren()){
-                    Medicate medicatie = medicatiesnapshot.getValue(Medicate.class);
-                    medilist.add(medicatie);
-
-                }
-
-                medicatielist adapter = new medicatielist(MainActivity.this, medilist);
-                ListViewMedicatie.setAdapter(adapter);
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-
-        });
-    }*/
+    }
 }

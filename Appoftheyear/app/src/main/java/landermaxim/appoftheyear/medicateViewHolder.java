@@ -28,14 +28,10 @@ public class medicateViewHolder extends RecyclerView.ViewHolder implements View.
         textViewtijd.setText(tijd);
         textViewnote.setText(note);
     }
-<<<<<<< Updated upstream
 
     @Override
     public void onClick(View v) {
-        int pos = getAdapterPosition();
-
+        Toast.makeText(itemView.getContext(), "Notification Set " + getItemId(), Toast.LENGTH_LONG).show();
 
     }
-=======
->>>>>>> Stashed changes
 }
