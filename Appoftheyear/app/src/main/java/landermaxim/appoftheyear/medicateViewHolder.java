@@ -3,17 +3,18 @@ package landermaxim.appoftheyear;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Created by Lander on 30/12/2017.
  */
 
-public class medicateViewHolder extends RecyclerView.ViewHolder{
+public class medicateViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
     View mview;
 
     public medicateViewHolder(View itemview) {
         super(itemview);
-
+        itemview.setOnClickListener(this);
         mview = itemview;
     }
 
@@ -28,4 +29,10 @@ public class medicateViewHolder extends RecyclerView.ViewHolder{
         textViewnote.setText(note);
     }
 
+    @Override
+    public void onClick(View v) {
+        int pos = getAdapterPosition();
+
+
+    }
 }
