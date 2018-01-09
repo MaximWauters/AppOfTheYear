@@ -28,6 +28,7 @@ public class medicateViewHolder extends RecyclerView.ViewHolder implements View.
         textViewtijd.setText(tijd);
         textViewnote.setText(note);
     }
+<<<<<<< Updated upstream
 
     @Override
     public void onClick(View v) {
@@ -35,4 +36,6 @@ public class medicateViewHolder extends RecyclerView.ViewHolder implements View.
 
 
     }
+=======
+>>>>>>> Stashed changes
 }

@@ -48,7 +48,11 @@ public class MainActivity extends AppCompatActivity {
         btnzoek.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+<<<<<<< Updated upstream
                 String zoektekst = edittextmedicatie.getText().toString();
+=======
+                String zoektekst = btnzoek.getText().toString(); // ??
+>>>>>>> Stashed changes
                 zoekMedicatie(zoektekst);
             }
         });
@@ -64,6 +68,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             protected void populateViewHolder(medicateViewHolder viewHolder, Medicate model, int position) {
                 viewHolder.setData(model.getNaam(),model.getTijd(),model.getNote());
+
+                /*
+                if (model.getNaam() == null) {
+                    viewHolder.setData("Geen data gevonden.","","");
+                }
+
+                */
             }
         };
         ListViewMedicatie.setAdapter(firebaseRecyclerAdapter);
@@ -80,7 +91,6 @@ public class MainActivity extends AppCompatActivity {
                 for (DataSnapshot medicatiesnapshot: dataSnapshot.getChildren()){
                     Medicate medicatie = medicatiesnapshot.getValue(Medicate.class);
                     medilist.add(medicatie);
-
 
                 }
 
